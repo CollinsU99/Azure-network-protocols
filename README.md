@@ -35,86 +35,86 @@ In simpler terms, this lab will teach you how to use Wireshark to monitor networ
 
 <h2>Actions and Observations</h2>
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/EL2Oexz.png" height="80%" width="80%" alt="img"/>
 </p>
 
 To create the Resource group, log into your Azure portal and click "Resoure group" labeled box (1) in the image above. You can also click the search bar to search for "Resource group".
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/9I7vc4k.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Click the "Create" tab at the top left.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/3JSk340.png" height="80%" width="80%" alt="img"/>
 </p>
 
 in the "Resource group" page, select your Microsoft Azure subscription as shown in box (1). Name your Resource group "RG-LAB-02" as shown in box (2). For the region, select "(US) West US 3" as shown in box (3). Now, click the "Review + create" tab at the lower left labeled box (4).
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/myONUt3.png" height="80%" width="80%" alt="img"/>
 </p>
 
 You will see a "Vallidation passed" message, go ahead and click the "Create" tab at the lower left labeled box (2) to create the Resource Group.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/LMmdhWT.png" height="80%" width="80%" alt="img"/>
 </p>
 
 The "Resoucre group created" notification indicates that our Resource Group was created successfully. You will also see "RG-LAB-02" listed as available Resource Group as shown in the box labeled (2)
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/Sp3379b.png" height="80%" width="80%" alt="img"/>
 </p>
 
 To create virtual machines, click the search bar and search for "virtual machines". Select "Virtual machines" labeled box (2)
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/H0r1gC7.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Click "Create" tab, and then click "Azure virtual machines".
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/npHLplQ.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Select your Azure subscription, select the resource group "RG-LAB-02" we created, and name your virtual machine "VM1". For the region, select "(US) West US 3" and select "No infrastructure redundancy required" as the Availability option. For the Image, select "Windows 10 Pro, version 22H2 - x64 Gen2 (free services eligible)". For the Size, select "Standard _E2s_v3 - 2vcpus, 16 GiB memory". We will use "labuser" as the VM1 Username. check the Licensing box, and click the "Networking" tab at the top
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/d5USAEa.png" height="80%" width="80%" alt="img"/>
 </p>
 
 In the networking section, the virtual network, subnet, and public IP will be automatically created for you.
 So make sure they all say "(new)". Then click "Review + create" tab at the lower left.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/XnRzI0G.png" height="80%" width="80%" alt="img"/>
 </p>
 
 "Deployment is in progess" means that the virtual machine is being created.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/da8cy1u.png" height="80%" width="80%" alt="img"/>
 </p>
 
 "Your deployment is complete" means that the virtual machine has been created.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/d3AJDTY.png" height="80%" width="80%" alt="img"/>
 </p>
 
 To create the Linux virtual machine, click the search bar and click "Virtual machines".
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/hPvLnZT.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Click "Create", and then click "Azure virtual machine".
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/WI2nqUw.png" height="80%" width="80%" alt="img"/>
 </p>
 
@@ -124,25 +124,25 @@ NOTE: We want to make sure that both virtual machines are in the same Resource g
 
 Name your virtual machine "VM2", for the virtual machine Region, select "(US) West US 3". For Availability options, select "No infrastructure redundancy required". For Image, select "Ubuntu server 20.04 LTS x64 Gen2 (free services eligible)". For Size, select "Standard_E2s_v3 - 2vcpus, 16 GiB memory". For the Authentication type, select "Password", and use "labuser" as your Username. Choose a unique password you can remember, and click the "Networking" tab at the top
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/8ZdonPu.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Make sure your VM2 is on the same virtual network as VM1, which is "VM1-vnet". The Subnet and Public IP will be generated automatically, then click "Review + create" tab at the lower left.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/epNjJhH.png" height="80%" width="80%" alt="img"/>
 </p>
 
 You will see a "Validation passed" message. Click the "Create" tab at the lower left.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/1OeRzOX.png" height="80%" width="80%" alt="img"/>
 </p>
 
 "Your deployment is complete" message means that VM2 has been created. Click the search bar and search for "virtual machines". 
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/lKtFVwZ.pngg" height="80%" width="80%" alt="img"/>
 </p>
 
@@ -150,79 +150,79 @@ Click "Virtual machines".
 
 We will go ahead and connect both virtual machines using RDP (Remote Destop Protocol).
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/HGxTcyH.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Click "VM1".
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/Jph5PHG.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Copy the Public IP of VM1
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/wdB60b4.png" height="80%" width="80%" alt="img"/>
 </p>
 
 On your local computer, click the search bar, search for "remote desktop", and click "open" to open RDP.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/4yiLN1j.png" height="80%" width="80%" alt="img"/>
 </p>
 
-Paste VM1 public IP, and click Connect.
+Paste the VM1 public IP, and click Connect.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/Tfdsy2a.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Click "More choices" > "Use a different account", type in VM1 username and password, and click "Ok" button.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/MRxCz7K.png" height="80%" width="80%" alt="img"/>
 </p>
 
 We are now connected to VM1, you can choose "No" for all the options as shown in the above image. Click the "Accept" button at the lower right to proceed.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/HWKEyKK.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Click the "Yes" button.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/ymZmp3u.png" height="80%" width="80%" alt="img"/>
 </p>
 
 On your VM1 desktop, click the "Microsoft Edge" application to open it
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/gT61gLQ.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Select "Start without your data" > "Confirm and continue" > "Continue without this data" > "Confirm and start browsing".
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/ymLBHYt.png" height="80%" width="80%" alt="img"/>
 </p>
 
 In the search bar, search for "wireshark download", and click Enter.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/UwtpLhY.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Click on the first link on the web page.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/Y9QHjes.png" height="80%" width="80%" alt="img"/>
 </p>
 
 Click "Windows x64 Installer" and click the three dots (...) at the top right of the page. click the downloaded Wireshark application to proceed with installation.
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/axgGzQF.png" height="80%" width="80%" alt="img"/>
 </p>
 
