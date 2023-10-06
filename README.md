@@ -39,7 +39,7 @@ In simpler terms, this lab will teach you how to use Wireshark to monitor networ
 <img src="https://i.imgur.com/EL2Oexz.png" height="80%" width="80%" alt="img"/>
 </p>
 
-To create the Resource group, log into your Azure portal and click "Resoure group" labeled box (1) in the image above. You can also click the search bar to search for "Resource group".
+To create the resource group, log into your Azure portal and click "Resource group" labeled box (1) in the image above. You can also click the search bar to search for "resource group".
 
 <p align="center">
 <img src="https://i.imgur.com/9I7vc4k.png" height="80%" width="80%" alt="img"/>
@@ -51,19 +51,19 @@ Click the "Create" tab at the top left.
 <img src="https://i.imgur.com/3JSk340.png" height="80%" width="80%" alt="img"/>
 </p>
 
-in the "Resource group" page, select your Microsoft Azure subscription as shown in box (1). Name your Resource group "RG-LAB-02" as shown in box (2). For the region, select "(US) West US 3" as shown in box (3). Now, click the "Review + create" tab at the lower left labeled box (4).
+In the "Resource group" page, select your Microsoft Azure subscription as shown in box (1). Name your resource group "RG-LAB-02" as shown in box (2). For the region, select "(US) West US 3" as shown in box (3). Now, click the "Review + create" tab in the lower left labeled box (4).
 
 <p align="center">
 <img src="https://i.imgur.com/myONUt3.png" height="80%" width="80%" alt="img"/>
 </p>
 
-You will see a "Vallidation passed" message, go ahead and click the "Create" tab at the lower left labeled box (2) to create the Resource Group.
+You will see a "Vallidation passed" message, go ahead and click the "Create" tab at the lower left labeled box (2) to create the resource group.
 
 <p align="center">
 <img src="https://i.imgur.com/LMmdhWT.png" height="80%" width="80%" alt="img"/>
 </p>
 
-The "Resoucre group created" notification indicates that our Resource Group was created successfully. You will also see "RG-LAB-02" listed as available Resource Group as shown in the box labeled (2)
+The "Resoucre group created" notification indicates that our Resource group was created successfully. You will also see "RG-LAB-02" listed as available Resource group, as shown in the box labeled (2)
 
 <p align="center">
 <img src="https://i.imgur.com/Sp3379b.png" height="80%" width="80%" alt="img"/>
@@ -118,7 +118,7 @@ Click "Create", and then click "Azure virtual machine".
 <img src="https://i.imgur.com/WI2nqUw.png" height="80%" width="80%" alt="img"/>
 </p>
 
-Select your Azure subscription, select "RG-LAB-02" for the Resource group
+Select your Azure subscription and select "RG-LAB-02" for the Resource group
 
 NOTE: We want to make sure that both virtual machines are in the same Resource group.
 
@@ -178,7 +178,7 @@ Paste the VM1 public IP, and click Connect.
 <img src="https://i.imgur.com/Tfdsy2a.png" height="80%" width="80%" alt="img"/>
 </p>
 
-Click "More choices" > "Use a different account", type in VM1 username and password, and click "Ok" button.
+Click "More choices" > "Use a different account", type in VM1 username and password, and click the "Ok" button.
 
 <p align="center">
 <img src="https://i.imgur.com/MRxCz7K.png" height="80%" width="80%" alt="img"/>
@@ -226,15 +226,15 @@ Click "Windows x64 Installer" and click the three dots (...) at the top right of
 <img src="https://i.imgur.com/axgGzQF.png" height="80%" width="80%" alt="img"/>
 </p>
 
-Click "Next" > "Noted" > "Next" > "Next" > "Next" > "Next" > "Next" > "Install" > "I Agree" > "Install" > "Next" > "Finish" > "Next" > "Finish". 
+Click "Next" > "Noted" > "Next" > "Next" > "Next" > "Next" > "Install" > "I Agree" > "Install" > "Next" > "Finish" > "Next" > "Finish". 
 
-You've now successfully installed Wireshark on Your Windows 10 Pro VM.
+You've now successfully installed Wireshark on your Windows 10 Pro VM.
 
 <p align="center">
 <img src="https://i.imgur.com/tanIfmu.png" height="80%" width="80%" alt="img"/>
 </p>
 
-in VM1, search for "Wiresahrk" on the search bar and click "Open".
+In VM1, search for "Wireshark" on the search bar and click "Open".
 
 <p align="center">
 <img src="https://i.imgur.com/hUqgGs1.png" height="80%" width="80%" alt="img"/>
@@ -256,7 +256,7 @@ Let's go ahead and filter the traffic so that it stops spamming.
 
 Search for "icmp" on the search bar, select "icmp" from the list of options provided and press "Enter" on your keyboard
 
-NOTE: ICMP (Internet Control Messaging Protocol) is a network layer protocol used by network devices to communicate errors or other information to other devices (test connectivity to differnt hosts on  a network).
+NOTE: ICMP (Internet Control Messaging Protocol) is a network layer protocol used by network devices to communicate errors or other information to other devices (test connectivity to different hosts on a network).
 
 In this case, we will use it to test connectivity to VM2 by pinging VM2's private IP address.
 
@@ -264,35 +264,35 @@ In this case, we will use it to test connectivity to VM2 by pinging VM2's privat
 <img src="https://i.imgur.com/uFLN32h.png" height="80%" width="80%" alt="img"/>
 </p>
 
-Go back to Azure portal and click VM2. Take note of VM2's private IP address.
+Go back to your Azure portal and click VM2. Take note of VM2's private IP address.
 
 <p align="center">
 <img src="https://i.imgur.com/ikAncIa.png" height="80%" width="80%" alt="img"/>
 </p>
 
-Go back to VM1 remote desktop connection, search for "powershell" at the search bar and click open.
+Go back to VM1 remote desktop connection, search for "powershell" in the search bar, and click open.
 
 <p align="center">
 <img src="https://i.imgur.com/83QW6rm.png" height="80%" width="80%" alt="img"/>
 </p>
 
-in Powershell, ping VM2's private IP address by typing "ping 10.0.0.5" and press the Enter button on your keyboard.
+In Powershell, ping VM2's private IP address by typing "ping 10.0.0.5" and pressing the Enter button on your keyboard.
 
-The image above shows that our ping was successful, as indicated by the 4 replies we got from VM2 (10.0.0.5). 
+The image above shows that our ping was successful, as indicated by the 4 replies we got from VM2 (10.0.0.5).
 
-The Ping statistics shows that 4 packets were sent and received, and 0 packet was lost.
+The Ping statistics show that 4 packets were sent and received, and 1 packet was lost.
 
-You can also confirm this on the Wireshark app, which shows us the source and destination IP addresses (VM1 & VM2), and the protocol used (ICMP). It also shows us that 4 requests was sent and we recieve 4 replies
+You can also confirm this on the Wireshark app, which shows us the source and destination IP addresses (VM1 and VM2) and the protocol used (ICMP). It also shows us that four requests was sent and we received four replies
 
 <p align="center">
 <img src="https://i.imgur.com/mgtx50E.png" height="80%" width="80%" alt="img"/>
 </p>
 
-Let's ping www.comptia.org (ping wwww.comptia.org -4). the -4 means we are specifying ICMP to ping www.comptia.org IPV4 address.
+Let's ping www.comptia.org (ping wwww.comptia.org -4). The -4 means we are specifying an ICMP to ping the www.comptia.org IPV4 address.
 
-As you can see from the image above, we got 4 replies, and 4 packets were sent and received, and 0 packet was lost. 
+As you can see from the image above, we got 4 replies, 4 packets were sent and received, and 1 packet was lost.
 
-in the Wireshark app, you can see the source and destination IP address of VM1 (10.0.0.4) and wwww.comptia.org (104.18.16.29).
+In the Wireshark app, you can see the source and destination IP addresses of VM1 (10.0.0.4) and www.comptia.org (104.18.16.29).
 
 <p align="center">
 <img src="https://i.imgur.com/oPHdkBZ.png" height="80%" width="80%" alt="img"/>
@@ -300,21 +300,53 @@ in the Wireshark app, you can see the source and destination IP address of VM1 (
 
 We will now initiate a non-stop ping from VM1 to VM2.
 
-Lets clear the current ICMP tarffic by clicking the green symbol and select "Continue without Saving"
+Let's clear the current ICMP traffic by clicking the green symbol and selecting "Continue without Saving."
 
 <p align="center">
 <img src="https://i.imgur.com/dWN9x57.png" height="80%" width="80%" alt="img"/>
 </p>
 
-in Powershell, initiate a non-stop ping to VM2 by typing "ping 10.0.0.5 -t", where -t means non-stop.
+In Powershell, initiate a non-stop ping to VM2 by typing "ping 10.0.0.5 -t", where -t means non-stop.
 
-Non-stop ping is now initiated.
+Non-stop pinging is now initiated.
+
+Let's change the firewall setting of VM2 to not allow ICMP traffic to come through.
 
 <p align="center">
-<img src="https://i.imgur.com/dWN9x57.png" height="80%" width="80%" alt="img"/>
+<img src="https://i.imgur.com/1bsnJKD.png" height="80%" width="80%" alt="img"/>
 </p>
 
-Lets change the firewall setting of VM2 to not allow ICMP traffic to come through. 
+Go back to your Azure portal and search for "network security group" in the search bar. Click "Network security groups".
+
+<p align="center">
+<img src="https://i.imgur.com/ofgQYls.png" height="80%" width="80%" alt="img"/>
+</p>
+
+From the above image, you can see both VMs have separate network security groups. Click "VM2-nsg" to open VM2's network security group.
+
+<p align="center">
+<img src="https://i.imgur.com/IhHNfxH.png" height="80%" width="80%" alt="img"/>
+</p>
+
+In the "VM2-nsg" page, click "Inbound security rules".
+
+NOTE: The "Inbound security rules" page allows us to deny inbound ICMP traffic so that it blocks the pings coming from VM1. We create a new security rule that denies ICMP traffic.
+
+<p align="center">
+<img src="https://i.imgur.com/IhHNfxH.png" height="80%" width="80%" alt="img"/>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
