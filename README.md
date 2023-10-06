@@ -24,7 +24,7 @@ In simpler terms, this lab will teach you how to use Wireshark to monitor networ
 - Create Resource Group
 - Create Virtual Machine in Windows and Linux
 - Connect to both VMs using RDP (Remote Destop Protocol)
-- Download Wireshark in VM1
+- Download Wireshark on VM1 (Windows 10 Pro)
 - Initiate a perpetual/non-stop ping from VM1 to VM2
 - Create a Network Security Group in Azure to deny the perpetual/non-stop ping
 - Observe SSH,DNS,RDP, and ICMP traffic in Wireshark
@@ -228,16 +228,93 @@ Click "Windows x64 Installer" and click the three dots (...) at the top right of
 
 Click "Next" > "Noted" > "Next" > "Next" > "Next" > "Next" > "Next" > "Install" > "I Agree" > "Install" > "Next" > "Finish" > "Next" > "Finish". 
 
-You've now downloaded Wireshark on Your Windows 10 Pro VM.
+You've now successfully installed Wireshark on Your Windows 10 Pro VM.
 
+<p align="center">
+<img src="https://i.imgur.com/tanIfmu.png" height="80%" width="80%" alt="img"/>
+</p>
 
+in VM1, search for "Wiresahrk" on the search bar and click "Open".
 
+<p align="center">
+<img src="https://i.imgur.com/hUqgGs1.png" height="80%" width="80%" alt="img"/>
+</p>
 
+Select "Ethernet" and click the blue wireshark icon at the top left to start capturing packets.
 
+<p align="center">
+<img src="https://i.imgur.com/LxsYwHS.png" height="80%" width="80%" alt="img"/>
+</p>
 
+You can see the live traffic that is happening on our virtual machine.
 
+Let's go ahead and filter the traffic so that it stops spamming.
 
+<p align="center">
+<img src="https://i.imgur.com/jJADguZ.png" height="80%" width="80%" alt="img"/>
+</p>
 
+Search for "icmp" on the search bar, select "icmp" from the list of options provided and press "Enter" on your keyboard
+
+NOTE: ICMP (Internet Control Messaging Protocol) is a network layer protocol used by network devices to communicate errors or other information to other devices (test connectivity to differnt hosts on  a network).
+
+In this case, we will use it to test connectivity to VM2 by pinging VM2's private IP address.
+
+<p align="center">
+<img src="https://i.imgur.com/uFLN32h.png" height="80%" width="80%" alt="img"/>
+</p>
+
+Go back to Azure portal and click VM2. Take note of VM2's private IP address.
+
+<p align="center">
+<img src="https://i.imgur.com/ikAncIa.png" height="80%" width="80%" alt="img"/>
+</p>
+
+Go back to VM1 remote desktop connection, search for "powershell" at the search bar and click open.
+
+<p align="center">
+<img src="https://i.imgur.com/83QW6rm.png" height="80%" width="80%" alt="img"/>
+</p>
+
+in Powershell, ping VM2's private IP address by typing "ping 10.0.0.5" and press the Enter button on your keyboard.
+
+The image above shows that our ping was successful, as indicated by the 4 replies we got from VM2 (10.0.0.5). 
+
+The Ping statistics shows that 4 packets were sent and received, and 0 packet was lost.
+
+You can also confirm this on the Wireshark app, which shows us the source and destination IP addresses (VM1 & VM2), and the protocol used (ICMP). It also shows us that 4 requests was sent and we recieve 4 replies
+
+<p align="center">
+<img src="https://i.imgur.com/mgtx50E.png" height="80%" width="80%" alt="img"/>
+</p>
+
+Let's ping www.comptia.org (ping wwww.comptia.org -4). the -4 means we are specifying ICMP to ping www.comptia.org IPV4 address.
+
+As you can see from the image above, we got 4 replies, and 4 packets were sent and received, and 0 packet was lost. 
+
+in the Wireshark app, you can see the source and destination IP address of VM1 (10.0.0.4) and wwww.comptia.org (104.18.16.29).
+
+<p align="center">
+<img src="https://i.imgur.com/oPHdkBZ.png" height="80%" width="80%" alt="img"/>
+</p>
+
+We will now initiate a non-stop ping from VM1 to VM2.
+
+Lets clear the current ICMP tarffic by clicking the green symbol and select "Continue without Saving"
+
+<p align="center">
+<img src="https://i.imgur.com/dWN9x57.png" height="80%" width="80%" alt="img"/>
+</p>
+
+in Powershell, initiate a non-stop ping to VM2 by typing "ping 10.0.0.5 -t), where -t means non-stop.
+
+Non-stop ping is now initiated.
+
+<p align="center">
+<img src="https://i.imgur.com/dWN9x57.png" height="80%" width="80%" alt="img"/>
+</p>
+
+Lets change the firewall setting of VM2 to not allow ICMP traffic to come through. 
 
 
 
