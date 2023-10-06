@@ -306,7 +306,7 @@ Lets clear the current ICMP tarffic by clicking the green symbol and select "Con
 <img src="https://i.imgur.com/dWN9x57.png" height="80%" width="80%" alt="img"/>
 </p>
 
-in Powershell, initiate a non-stop ping to VM2 by typing "ping 10.0.0.5 -t), where -t means non-stop.
+in Powershell, initiate a non-stop ping to VM2 by typing "ping 10.0.0.5 -t", where -t means non-stop.
 
 Non-stop ping is now initiated.
 
