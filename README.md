@@ -288,7 +288,7 @@ You can also confirm this on the Wireshark app, which shows us the source and de
 <img src="https://i.imgur.com/mgtx50E.png" height="80%" width="80%" alt="img"/>
 </p>
 
-Let's ping www.comptia.org (ping wwww.comptia.org -4). The -4 means we are specifying an ICMP to ping the www.comptia.org IPV4 address.
+Let's ping www.comptia.org (ping wwww.comptia.org -4). The -4 means that we are specifying ICMP to ping www.comptia.org IPV4 address.
 
 As you can see from the image above, we got 4 replies, 4 packets were sent and received, and 1 packet was lost.
 
@@ -330,7 +330,7 @@ From the above image, you can see both VMs have separate network security groups
 
 In the "VM2-nsg" page, click "Inbound security rules".
 
-NOTE: The "Inbound security rules" page allows us to deny inbound ICMP traffic so that it blocks the pings coming from VM1. We create a new security rule that denies ICMP traffic.
+NOTE: The "Inbound security rules" page allows us to deny inbound ICMP traffic so that it blocks the pings coming from VM1. We will create a new security rule that denies ICMP traffic.
 
 <p align="center">
 <img src="https://i.imgur.com/fAuKcKp.png" height="80%" width="80%" alt="img"/>
